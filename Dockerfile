@@ -1,4 +1,4 @@
-FROM python:2.7.10
+FROM python:3.8
 
 RUN mkdir -p /stacks
 WORKDIR /stacks

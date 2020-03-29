@@ -1,37 +1,24 @@
 ethcrt
 ####################
 
-A `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ (project template)
-for creating a barebone
+The original project used to develop this repo can be found here
 `stacker <https://github.com/cloudtools/stacker#stacker>`_ project
-
-Note:
- You do not have to setup your project this way, this is just meant as a
- suggestion and some simple guidance to help folks who are new to stacker.
 
 Requirements
 ============
 
-* Python 2.7 or 3.4+
-* `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/installation.html>`_
+* Python 3.4+
+* `aws-vault https://github.com/99designs/aws-vault`
 * `poetry <https://poetry.eustace.io/>`_
 
 Usage
 =====
 
-1. Generate a ``stacker`` project, following the prompts from the command.
-
-      .. code-block:: bash
-
-          $ cookiecutter gh:cloudtools/stacker_cookiecutter
-          project_name [myproject]:
-          stacker_bucket [stacker-myproject]:
-          repo_name [myproject]:
-          description [stacker project for myproject]:
-
-This command will create a new stacker project in your present working
-directory. 
-
+1. Clone this repo
+2. Run `make setup`
+3. Modify the environment files accordingly
+4. Run `stacker build --profile <profile> --stacks stacker-bucket stacker.yaml`
+   
 Note: You should try to make your ``stacker_bucket`` variable unique
 since S3 bucket names share a global namespace. It will default to
 ``stacker-ethcrt`` but you may choose any unique value.

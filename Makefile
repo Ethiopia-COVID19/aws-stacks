@@ -7,6 +7,7 @@ setup:
 ifndef POETRY
 	$(error "poetry is not available, please install 'pip install poetry'")
 endif
+	brew install aws-vault
 	poetry install
 
 test:
